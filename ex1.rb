@@ -7,9 +7,6 @@ def translate(vm_path, asm_path)
   output = ''
   for line in lines
     line = line.split
-    if line[0] == '//'
-        next
-    end
       case line[0]
         when 'add'
           output << add
@@ -39,61 +36,61 @@ def translate(vm_path, asm_path)
 end
 
 def add
-  output = "\nTODO: implement add\n"
+  output = "\n//add\n"
   return output
 end
 
 def sub
-  output = "\nTODO: implement sub\n"
+  output = "\n//sub\n"
   return output
 end
 
 def neg
-  output = "\nTODO: implement neg\n"
+  output = "\n//neg\n"
   return output
 end
 
 def eq
-  output = "\nTODO: implement eq\n"
+  output = "\n//eq\n"
   return output
 end
 
 def gt
-  output = "\nTODO: implement gt\n"
+  output = "\n//gt\n"
   return output
 end
 
 def lt
-  output = "\nTODO: implement lt\n"
+  output = "\n//lt\n"
   return output
 end
 
 def f_and
-  output = "\nTODO: implement f_and\n"
+  output = "\n//f_and\n"
   return output
 end
 
 def f_or
-  output = "\nTODO: implement f_or\n"
+  output = "\n//f_or\n"
   return output
 end
 
 def f_not
-  output = "\nTODO: implement f_not\n"
+  output = "\n//f_not\n"
   return output
 end
 
 def push(segment, index)
-  output = "\nTODO: implement push\n"
-  output << 'segment: ' << segment
+  output = "\n//push"
+  output << ' segment: ' << segment
   output << ' index: ' << index
   output << "\n"
   return output
 end
 
 def pop(segment, index)
-  output = "\nTODO: implement pop\n"
-  output << 'segment: ' << segment
+  output = "\n//pop"
+  output << ' segment: ' << segment
   output << ' index: ' << index
   output << "\n"
   return output
