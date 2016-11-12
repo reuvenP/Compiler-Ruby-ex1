@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ex1.iml" afterPath="$PROJECT_DIR$/.idea/ex1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ex1.rb" afterPath="$PROJECT_DIR$/ex1.rb" />
     </list>
@@ -18,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1478982910675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
+    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1478987251577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="ex1.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ex1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -259,7 +258,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478974347524</updated>
-      <workItem from="1478974348677" duration="6053000" />
+      <workItem from="1478974348677" duration="9660000" />
     </task>
     <task id="LOCAL-00001" summary="starting...">
       <created>1478981895209</created>
@@ -275,11 +274,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478982373864</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="continue...">
+      <created>1478983166799</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1478983166799</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6053000" />
+    <option name="totallyTimeSpent" value="9660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -319,8 +325,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ex1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
           <folding />
         </state>
       </provider>

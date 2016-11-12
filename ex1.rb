@@ -38,18 +38,40 @@ def translate(vm_path, asm_path)
   end
 end
 
+def pre_binary
+  output = "@SP\n" #get SP into A
+  output << "M=M-1\n" #decrease SP by 1
+  output << "A=M\n" #point to the new SP
+  output << "D=M\n" #pop the previous variable to D register
+  output << "A=A-1\n" #decrease SP by 1
+  return output
+end
+
+def pre_unary
+  output = "@SP\n" #get SP into A
+  output << "M=M-1\n" #decrease SP by 1
+  output << "A=M\n" #point to the new SP
+  return output
+end
+
 def add
   output = "\n//add\n"
+  output << pre_binary
+  output << "M=M+D\n" #insert into stack top D + current stack top
   return output
 end
 
 def sub
   output = "\n//sub\n"
+  output << pre_binary
+  output << "M=M-D\n" #insert into stack top D - current stack top
   return output
 end
 
 def neg
   output = "\n//neg\n"
+  output << pre_unary
+  output << "M=-M" #update stack top to it's negative
   return output
 end
 
@@ -70,16 +92,22 @@ end
 
 def f_and
   output = "\n//f_and\n"
+  output << pre_binary
+  output << "M=M&D\n"
   return output
 end
 
 def f_or
   output = "\n//f_or\n"
+  output << pre_binary
+  output << "M=M|D\n"
   return output
 end
 
 def f_not
   output = "\n//f_not\n"
+  output << pre_unary
+  output << "M=!M\n"
   return output
 end
 
