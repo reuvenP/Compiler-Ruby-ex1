@@ -33,6 +33,9 @@ def translate(vm_path, asm_path)
       end
   end
   puts(output)
+  File.open(asm_path, 'w') do |f|
+    f.puts(output)
+  end
 end
 
 def add
@@ -95,5 +98,5 @@ def pop(segment, index)
   output << "\n"
   return output
 end
-translate(ARGV[0], 'aaa')
+translate(ARGV[0], ARGV[1])
 

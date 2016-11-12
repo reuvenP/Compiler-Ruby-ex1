@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ex1.iml" afterPath="$PROJECT_DIR$/.idea/ex1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ex1.rb" afterPath="$PROJECT_DIR$/ex1.rb" />
     </list>
@@ -17,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1478982340832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
+    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1478982910675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="ex1.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ex1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="92" column="14" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -128,7 +129,7 @@
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/ex1.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="C:\Users\reuvenp\Downloads\ex1-ruby\MemoryAccess\BasicTest\BasicTest.vm" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="C:\Users\reuvenp\Downloads\ex1-ruby\MemoryAccess\BasicTest\BasicTest.vm C:\Users\reuvenp\Downloads\ex1-ruby\MemoryAccess\BasicTest\BasicTest.asm" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
@@ -258,7 +259,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478974347524</updated>
-      <workItem from="1478974348677" duration="5256000" />
+      <workItem from="1478974348677" duration="6053000" />
     </task>
     <task id="LOCAL-00001" summary="starting...">
       <created>1478981895209</created>
@@ -267,11 +268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478981895209</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="continue...">
+      <created>1478982373864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478982373864</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5256000" />
+    <option name="totallyTimeSpent" value="6053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -301,7 +309,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="starting..." />
-    <option name="LAST_COMMIT_MESSAGE" value="starting..." />
+    <MESSAGE value="continue..." />
+    <option name="LAST_COMMIT_MESSAGE" value="continue..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -310,8 +319,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ex1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="92" column="14" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
       </provider>
