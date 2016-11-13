@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output_file.asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ex1.rb" afterPath="$PROJECT_DIR$/ex1.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vm_file.vm" afterPath="$PROJECT_DIR$/vm_file.vm" />
     </list>
     <ignored path="ex1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -294,7 +293,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478974347524</updated>
-      <workItem from="1478974348677" duration="23259000" />
+      <workItem from="1478974348677" duration="23549000" />
     </task>
     <task id="LOCAL-00001" summary="starting...">
       <created>1478981895209</created>
@@ -345,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479042389245</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="push constant">
+      <created>1479057070879</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1479057070879</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23259000" />
+    <option name="totallyTimeSpent" value="23549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
