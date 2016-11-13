@@ -6,6 +6,7 @@ def translate(vm_path, asm_path)
   lines = IO.readlines(vm_path)
   #TODO: remove next row - init
   #TODO: replace @99 with @SP
+  #TODO: extract to functions
   output = "@256\nD=A\n@99\nM=D\n"
   for line in lines
     line = line.split
@@ -41,18 +42,24 @@ def translate(vm_path, asm_path)
 end
 
 def pre_binary
-  output = "@99\n" #get 99 into A
-  output << "M=M-1\n" #decrease 99 by 1
-  output << "A=M\n" #point to the new 99
+  output = "@99\n" #get SP into A
+  output << "M=M-1\n" #decrease SP by 1
+  output << "A=M\n" #point to the new SP
   output << "D=M\n" #pop the previous variable to D register
-  output << "A=A-1\n" #decrease 99 by 1
+  output << "A=A-1\n" #decrease SP by 1
   return output
 end
 
 def pre_unary
   output = "@99\n" #get 99 into A
-  output << "M=M-1\n" #decrease 99 by 1
-  output << "A=M\n" #point to the new 99
+  output << "A=M-1\n"
+  return output
+end
+
+def post_binary
+  output = "D=A+1\n"
+  output << "@99\n"
+  output << "M=D\n"
   return output
 end
 
@@ -60,6 +67,7 @@ def add
   output = "\n//add\n"
   output << pre_binary
   output << "M=M+D\n" #insert into stack top D + current stack top
+  output << post_binary
   return output
 end
 
@@ -67,13 +75,14 @@ def sub
   output = "\n//sub\n"
   output << pre_binary
   output << "M=M-D\n" #insert into stack top D - current stack top
+  output << post_binary
   return output
 end
 
 def neg
   output = "\n//neg\n"
   output << pre_unary
-  output << "M=-M" #update stack top to it's negative
+  output << "M=-M\n" #update stack top to it's negative
   return output
 end
 
@@ -96,6 +105,7 @@ def f_and
   output = "\n//f_and\n"
   output << pre_binary
   output << "M=M&D\n"
+  output << post_binary
   return output
 end
 
@@ -103,6 +113,7 @@ def f_or
   output = "\n//f_or\n"
   output << pre_binary
   output << "M=M|D\n"
+  output << post_binary
   return output
 end
 

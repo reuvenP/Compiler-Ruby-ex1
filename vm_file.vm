@@ -1,3 +1,3 @@
-push constant 70
-push constant 70
-add
+push constant 1
+push constant 2
+and
