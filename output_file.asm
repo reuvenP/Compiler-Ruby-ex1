@@ -23,7 +23,7 @@ D=A+1
 @99
 M=D
 
-//lt
+//gt
 @99
 M=M-1
 A=M
@@ -32,7 +32,7 @@ A=A-1
 A=M
 D=A-D
 @IF_TRUE1
-D;JLT
+D;JGT
 @99
 A=M-1
 M=0
@@ -43,3 +43,34 @@ M=0
 A=M-1
 M=-1
 (END1)
+
+//push segment: constant index: 0
+@0
+D=A
+@99
+A=M
+M=D
+D=A+1
+@99
+M=D
+
+//eq
+@99
+M=M-1
+A=M
+D=M
+A=A-1
+A=M
+D=A-D
+@IF_TRUE2
+D;JEQ
+@99
+A=M-1
+M=0
+@END2
+0;JEQ
+(IF_TRUE2)
+@99
+A=M-1
+M=-1
+(END2)

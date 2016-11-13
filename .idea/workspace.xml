@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ex1.rb" afterPath="$PROJECT_DIR$/ex1.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_file.asm" afterPath="$PROJECT_DIR$/output_file.asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vm_file.vm" afterPath="$PROJECT_DIR$/vm_file.vm" />
     </list>
@@ -19,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1479061482603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
+    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1479061912547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ex1.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ex1.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ex1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="55">
               <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
               <folding>
                 <element signature="e#19#954#0" expanded="false" />
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vm_file.vm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vm_file.vm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vm_file.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -312,7 +311,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478974347524</updated>
-      <workItem from="1478974348677" duration="26681000" />
+      <workItem from="1478974348677" duration="27191000" />
     </task>
     <task id="LOCAL-00001" summary="starting...">
       <created>1478981895209</created>
@@ -384,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479057401289</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="eq lt gt complete">
+      <created>1479061541558</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1479061541558</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26681000" />
+    <option name="totallyTimeSpent" value="27191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -430,7 +436,8 @@
     <MESSAGE value="simple arithmetic operations" />
     <MESSAGE value="push constant" />
     <MESSAGE value="output file" />
-    <option name="LAST_COMMIT_MESSAGE" value="output file" />
+    <MESSAGE value="eq lt gt complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="eq lt gt complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,17 +462,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vm_file.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ex1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="55">
           <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
           <folding>
             <element signature="e#19#954#0" expanded="false" />
@@ -487,6 +486,14 @@
             <element signature="e#4152#4301#0" expanded="false" />
             <element signature="e#4303#4521#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vm_file.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
