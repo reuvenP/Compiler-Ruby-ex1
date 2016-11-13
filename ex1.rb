@@ -169,6 +169,8 @@ def push(segment, index)
   case segment
     when 'constant'
       output << push_constant(index)
+    when 'local'
+      output << push_local(index)
   end
   return output
 end
@@ -178,19 +180,41 @@ def pop(segment, index)
   output << ' segment: ' << segment
   output << ' index: ' << index
   output << "\n"
+  case segment
+    when 'local'
+      output << pop_local(index)
+  end
   return output
 end
 
 def push_constant(index)
   output = '@' << index << "\n"
   output << "D=A\n"
-  output << "@99\n"
+  output << push_from_D
+  return output
+end
+
+def push_local(index)
+  output = "@1\n" #LCL = 1
+  output << "D=M\n" #D = RAM[1]
+  output << 'A=D+' << index << "\n" #A = RAM[1] + index
+  output << "D=M\n" #D = RAM[RAM[1] + index]
+  output << push_from_D
+  return output
+end
+
+def pop_local(index)
+
+end
+
+def push_from_D
+  output = "@99\n"
   output << "A=M\n"
   output << "M=D\n"
   output << "D=A+1\n"
   output << "@99\n"
   output << "M=D\n"
-  return output
 end
+
 translate(ARGV[0], ARGV[1])
 

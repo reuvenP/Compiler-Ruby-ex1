@@ -4,8 +4,4 @@
 // File name: projects/07/StackArithmetic/SimpleAdd/SimpleAdd.vm
 
 // Pushes and adds two constants.
-push constant 9
-push constant 8
-gt
-push constant 0
-eq
+push
