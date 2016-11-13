@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ex1.rb" afterPath="$PROJECT_DIR$/ex1.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_file.asm" afterPath="$PROJECT_DIR$/output_file.asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vm_file.vm" afterPath="$PROJECT_DIR$/vm_file.vm" />
     </list>
     <ignored path="ex1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1479057392000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
+    <SUITE FILE_PATH="coverage/ex1@ex1.coverage" NAME="ex1 Coverage Results" MODIFIED="1479061482603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ex1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,13 +33,27 @@
       <file leaf-file-name="ex1.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ex1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
               <folding>
+                <element signature="e#19#954#0" expanded="false" />
+                <element signature="e#54#950#1" expanded="false" />
+                <element signature="e#293#876#0" expanded="false" />
+                <element signature="e#339#870#0" expanded="false" />
+                <element signature="e#956#1217#0" expanded="false" />
                 <element signature="e#1219#1308#0" expanded="false" />
                 <element signature="e#1310#1461#0" expanded="false" />
                 <element signature="e#1463#1614#0" expanded="false" />
                 <element signature="e#1616#1744#0" expanded="false" />
+                <element signature="e#1746#2365#0" expanded="false" />
+                <element signature="e#2367#2986#0" expanded="false" />
+                <element signature="e#2988#3607#0" expanded="false" />
+                <element signature="e#3609#3719#0" expanded="false" />
+                <element signature="e#3721#3829#0" expanded="false" />
+                <element signature="e#3831#3928#0" expanded="false" />
+                <element signature="e#3930#4150#0" expanded="false" />
+                <element signature="e#4152#4301#0" expanded="false" />
+                <element signature="e#4303#4521#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,8 +62,8 @@
       <file leaf-file-name="vm_file.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vm_file.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/output_file.asm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-221">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,9 +95,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ex1_class.rb" />
-        <option value="$PROJECT_DIR$/vm_file.vm" />
         <option value="$PROJECT_DIR$/output_file.asm" />
         <option value="$PROJECT_DIR$/ex1.rb" />
+        <option value="$PROJECT_DIR$/vm_file.vm" />
       </list>
     </option>
   </component>
@@ -286,6 +302,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bcbb650d-0e41-48c1-a345-978973de3707" name="Default" comment="" />
@@ -293,7 +312,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478974347524</updated>
-      <workItem from="1478974348677" duration="23590000" />
+      <workItem from="1478974348677" duration="26681000" />
     </task>
     <task id="LOCAL-00001" summary="starting...">
       <created>1478981895209</created>
@@ -358,11 +377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479057365344</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="output file">
+      <created>1479057401289</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1479057401289</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23590000" />
+    <option name="totallyTimeSpent" value="26681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -373,7 +399,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -386,6 +412,14 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -400,7 +434,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -413,31 +447,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vm_file.vm">
+    <entry file="file://$PROJECT_DIR$/output_file.asm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="-221">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output_file.asm">
+    <entry file="file://$PROJECT_DIR$/vm_file.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ex1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="237">
+          <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
           <folding>
+            <element signature="e#19#954#0" expanded="false" />
+            <element signature="e#54#950#1" expanded="false" />
+            <element signature="e#293#876#0" expanded="false" />
+            <element signature="e#339#870#0" expanded="false" />
+            <element signature="e#956#1217#0" expanded="false" />
             <element signature="e#1219#1308#0" expanded="false" />
             <element signature="e#1310#1461#0" expanded="false" />
             <element signature="e#1463#1614#0" expanded="false" />
             <element signature="e#1616#1744#0" expanded="false" />
+            <element signature="e#1746#2365#0" expanded="false" />
+            <element signature="e#2367#2986#0" expanded="false" />
+            <element signature="e#2988#3607#0" expanded="false" />
+            <element signature="e#3609#3719#0" expanded="false" />
+            <element signature="e#3721#3829#0" expanded="false" />
+            <element signature="e#3831#3928#0" expanded="false" />
+            <element signature="e#3930#4150#0" expanded="false" />
+            <element signature="e#4152#4301#0" expanded="false" />
+            <element signature="e#4303#4521#0" expanded="false" />
           </folding>
         </state>
       </provider>

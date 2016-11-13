@@ -81,31 +81,63 @@ end
 def eq
   output = "\n//eq\n"
   output << pop_and_point_to_prev
-  output << "A=M\n"
-  output << "D=A-D\n"
-  output << '@TRUE' << $label_counter.to_s << "\n"
+  output << "A=M\n" #in D there is the first arg, in A the second
+  output << "D=A-D\n" #if D and A are equal = D is 0.
+  output << '@IF_TRUE' << $label_counter.to_s << "\n"
   output << "D;JEQ\n"
   output << "@99\n"
   output << "A=M-1\n"
   output << "M=0\n"
-  output << '@FALSE' << $label_counter.to_s << "\n"
+  output << '@END' << $label_counter.to_s << "\n"
   output << "0;JEQ\n"
-  output << '(TRUE' << $label_counter.to_s << ")\n"
+  output << '(IF_TRUE' << $label_counter.to_s << ")\n"
   output << "@99\n"
   output << "A=M-1\n"
   output << "M=-1\n"
-  output << '(FALSE' << $label_counter.to_s << ")\n"
+  output << '(END' << $label_counter.to_s << ")\n"
   $label_counter = $label_counter + 1
   return output
 end
 
 def gt
   output = "\n//gt\n"
+  output << pop_and_point_to_prev
+  output << "A=M\n" #in D there is the first arg, in A the second
+  output << "D=A-D\n" #if D and A are equal = D is 0.
+  output << '@IF_TRUE' << $label_counter.to_s << "\n"
+  output << "D;JGT\n"
+  output << "@99\n"
+  output << "A=M-1\n"
+  output << "M=0\n"
+  output << '@END' << $label_counter.to_s << "\n"
+  output << "0;JEQ\n"
+  output << '(IF_TRUE' << $label_counter.to_s << ")\n"
+  output << "@99\n"
+  output << "A=M-1\n"
+  output << "M=-1\n"
+  output << '(END' << $label_counter.to_s << ")\n"
+  $label_counter = $label_counter + 1
   return output
 end
 
 def lt
   output = "\n//lt\n"
+  output << pop_and_point_to_prev
+  output << "A=M\n" #in D there is the first arg, in A the second
+  output << "D=A-D\n" #if D and A are equal = D is 0.
+  output << '@IF_TRUE' << $label_counter.to_s << "\n"
+  output << "D;JLT\n"
+  output << "@99\n"
+  output << "A=M-1\n"
+  output << "M=0\n"
+  output << '@END' << $label_counter.to_s << "\n"
+  output << "0;JEQ\n"
+  output << '(IF_TRUE' << $label_counter.to_s << ")\n"
+  output << "@99\n"
+  output << "A=M-1\n"
+  output << "M=-1\n"
+  output << '(END' << $label_counter.to_s << ")\n"
+  $label_counter = $label_counter + 1
   return output
 end
 
