@@ -6,7 +6,6 @@ def translate_file(vm_path)
   lines = IO.readlines(vm_path)
   #TODO: remove next row - init
   #TODO: replace @99 with @SP
-  #TODO: extract to functions
   output = "@256\nD=A\n@99\nM=D\n"
   for line in lines
     line = line.split
@@ -396,8 +395,6 @@ def translate_folder(folder_path)
     end
   end
   out_file = folder_path + '\\' + 'output.asm'
-  #TODO: remove before submission
-  puts(output)
   File.open(out_file, 'w') do |f|
    f.puts(output)
   end
