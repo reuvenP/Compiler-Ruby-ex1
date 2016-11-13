@@ -4,7 +4,9 @@ def translate(vm_path, asm_path)
     return
   end
   lines = IO.readlines(vm_path)
-  output = ''
+  #TODO: remove next row - init
+  #TODO: replace @99 with @SP
+  output = "@256\nD=A\n@99\nM=D\n"
   for line in lines
     line = line.split
       case line[0]
@@ -39,18 +41,18 @@ def translate(vm_path, asm_path)
 end
 
 def pre_binary
-  output = "@SP\n" #get SP into A
-  output << "M=M-1\n" #decrease SP by 1
-  output << "A=M\n" #point to the new SP
+  output = "@99\n" #get 99 into A
+  output << "M=M-1\n" #decrease 99 by 1
+  output << "A=M\n" #point to the new 99
   output << "D=M\n" #pop the previous variable to D register
-  output << "A=A-1\n" #decrease SP by 1
+  output << "A=A-1\n" #decrease 99 by 1
   return output
 end
 
 def pre_unary
-  output = "@SP\n" #get SP into A
-  output << "M=M-1\n" #decrease SP by 1
-  output << "A=M\n" #point to the new SP
+  output = "@99\n" #get 99 into A
+  output << "M=M-1\n" #decrease 99 by 1
+  output << "A=M\n" #point to the new 99
   return output
 end
 
@@ -114,8 +116,11 @@ end
 def push(segment, index)
   output = "\n//push"
   output << ' segment: ' << segment
-  output << ' index: ' << index
-  output << "\n"
+  output << ' index: ' << index << "\n"
+  case segment
+    when 'constant'
+      output << push_constant(index)
+  end
   return output
 end
 
@@ -124,6 +129,18 @@ def pop(segment, index)
   output << ' segment: ' << segment
   output << ' index: ' << index
   output << "\n"
+  return output
+end
+
+def push_constant(index)
+  output = '@' << index << "\n"
+  output << "D=A\n"
+  output << "@99\n"
+  output << "A=M\n"
+  output << "M=D\n"
+  output << "D=A+1\n"
+  output << "@99\n"
+  output << "M=D\n"
   return output
 end
 translate(ARGV[0], ARGV[1])
