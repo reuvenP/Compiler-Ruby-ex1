@@ -1,8 +1,7 @@
 $label_counter = 1
-def translate(vm_path, asm_path)
+def translate_file(vm_path)
   if !File.file?(vm_path)
-    puts('VM File does not exists!')
-    return
+    return 'VM File does not exists!'
   end
   lines = IO.readlines(vm_path)
   #TODO: remove next row - init
@@ -31,15 +30,12 @@ def translate(vm_path, asm_path)
         when 'not'
           output << f_not
         when 'push'
-          output << push(line[1], line[2])
+          output << push(line[1], line[2], vm_path)
         when 'pop'
-          output << pop(line[1], line[2])
+          output << pop(line[1], line[2], vm_path)
       end
   end
-  puts(output)
-  File.open(asm_path, 'w') do |f|
-    f.puts(output)
-  end
+  return output
 end
 
 def pop_to_D
@@ -162,7 +158,7 @@ def f_not
   return output
 end
 
-def push(segment, index)
+def push(segment, index, path)
   output = "\n//push"
   output << ' segment: ' << segment
   output << ' index: ' << index << "\n"
@@ -179,13 +175,15 @@ def push(segment, index)
       output << push_that(index)
     when 'temp'
       output << push_temp(index)
+    when 'static'
+      output << push_static(index, path)
     when 'pointer'
       output << push_pointer(index)
   end
   return output
 end
 
-def pop(segment, index)
+def pop(segment, index, path)
   output = "\n//pop"
   output << ' segment: ' << segment
   output << ' index: ' << index
@@ -201,6 +199,8 @@ def pop(segment, index)
       output << pop_that(index)
     when 'temp'
       output << pop_temp(index)
+    when 'static'
+      output << pop_static(index, path)
     when 'pointer'
       output << pop_pointer(index)
   end
@@ -363,6 +363,20 @@ def pop_pointer(index)
   output << "M=D\n" #RAM[THIS/THAT] = top of stack
 end
 
+def push_static(index, path)
+  output = '@' << path.split('\\').last[0..-3] << index << "\n"
+  output << "D=M\n"
+  output << push_from_D
+  return output
+end
+
+def pop_static(index, path)
+  output = pop_to_D
+  output << '@' << path.split('\\').last[0..-3] << index << "\n"
+  output << "M=D\n"
+  return output
+end
+
 def push_from_D
   output = "@99\n"
   output << "A=M\n"
@@ -372,5 +386,22 @@ def push_from_D
   output << "M=D\n"
 end
 
-translate(ARGV[0], ARGV[1])
+def translate_folder(folder_path)
+  output = ''
+  all_files = Dir.entries(folder_path)
+  for file in all_files
+    if file.end_with? '.vm'
+      puts(file)
+      output << translate_file(folder_path + '\\' + file)
+    end
+  end
+  out_file = folder_path + '\\' + 'output.asm'
+  #TODO: remove before submission
+  puts(output)
+  File.open(out_file, 'w') do |f|
+   f.puts(output)
+  end
+end
+
+translate_folder(ARGV[0])
 

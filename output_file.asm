@@ -162,3 +162,13 @@ A=M
 D=M
 A=A-1
 M=M+D
+
+//push segment: static index: 7
+@vm_file.7
+D=M
+@99
+A=M
+M=D
+D=A+1
+@99
+M=D

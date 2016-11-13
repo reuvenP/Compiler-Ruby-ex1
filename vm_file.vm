@@ -20,3 +20,4 @@ push this 2
 sub
 push that 6
 add
+push static 7
