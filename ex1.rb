@@ -51,15 +51,8 @@ def pre_binary
 end
 
 def pre_unary
-  output = "@99\n" #get 99 into A
+  output = "@99\n" #get SP into A
   output << "A=M-1\n"
-  return output
-end
-
-def post_binary
-  output = "D=A+1\n"
-  output << "@99\n"
-  output << "M=D\n"
   return output
 end
 
@@ -67,7 +60,6 @@ def add
   output = "\n//add\n"
   output << pre_binary
   output << "M=M+D\n" #insert into stack top D + current stack top
-  output << post_binary
   return output
 end
 
@@ -75,7 +67,6 @@ def sub
   output = "\n//sub\n"
   output << pre_binary
   output << "M=M-D\n" #insert into stack top D - current stack top
-  output << post_binary
   return output
 end
 
@@ -105,7 +96,6 @@ def f_and
   output = "\n//f_and\n"
   output << pre_binary
   output << "M=M&D\n"
-  output << post_binary
   return output
 end
 
@@ -113,7 +103,6 @@ def f_or
   output = "\n//f_or\n"
   output << pre_binary
   output << "M=M|D\n"
-  output << post_binary
   return output
 end
 
