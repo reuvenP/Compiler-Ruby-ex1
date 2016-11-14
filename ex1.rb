@@ -4,9 +4,7 @@ def translate_file(vm_path)
     return 'VM File does not exists!'
   end
   lines = IO.readlines(vm_path)
-  #TODO: remove next row - init
-  #TODO: replace @99 with @SP
-  output = "@256\nD=A\n@99\nM=D\n"
+  output = ''
   for line in lines
     line = line.split
       case line[0]
@@ -38,7 +36,7 @@ def translate_file(vm_path)
 end
 
 def pop_to_D
-  output = "@99\n" #get SP into A
+  output = "@SP\n" #get SP into A
   output << "M=M-1\n" #decrease SP by 1
   output << "A=M\n" #point to the new SP
   output << "D=M\n" #pop the previous variable to D register
@@ -47,7 +45,7 @@ def pop_to_D
 end
 
 def pre_unary
-  output = "@99\n" #get SP into A
+  output = "@SP\n" #get SP into A
   output << "A=M-1\n"
   return output
 end
@@ -80,13 +78,13 @@ def eq
   output << "D=A-D\n" #if D and A are equal = D is 0.
   output << '@IF_TRUE' << $label_counter.to_s << "\n"
   output << "D;JEQ\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=0\n"
   output << '@END' << $label_counter.to_s << "\n"
   output << "0;JEQ\n"
   output << '(IF_TRUE' << $label_counter.to_s << ")\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=-1\n"
   output << '(END' << $label_counter.to_s << ")\n"
@@ -101,13 +99,13 @@ def gt
   output << "D=A-D\n" #if D and A are equal = D is 0.
   output << '@IF_TRUE' << $label_counter.to_s << "\n"
   output << "D;JGT\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=0\n"
   output << '@END' << $label_counter.to_s << "\n"
   output << "0;JEQ\n"
   output << '(IF_TRUE' << $label_counter.to_s << ")\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=-1\n"
   output << '(END' << $label_counter.to_s << ")\n"
@@ -122,13 +120,13 @@ def lt
   output << "D=A-D\n" #if D and A are equal = D is 0.
   output << '@IF_TRUE' << $label_counter.to_s << "\n"
   output << "D;JLT\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=0\n"
   output << '@END' << $label_counter.to_s << "\n"
   output << "0;JEQ\n"
   output << '(IF_TRUE' << $label_counter.to_s << ")\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "A=M-1\n"
   output << "M=-1\n"
   output << '(END' << $label_counter.to_s << ")\n"
@@ -224,7 +222,6 @@ def push_local(index)
 end
 
 def pop_local(index)
-  #TODO: check about reg13
   output = "@1\n" #LCL = 1
   output << "D=M\n" #D = RAM[1]
   output << '@' << index << "\n" #A = index
@@ -249,7 +246,6 @@ def push_argument(index)
 end
 
 def pop_argument(index)
-  #TODO: check about reg13
   output = "@2\n" #ARG = 2
   output << "D=M\n" #D = RAM[2]
   output << '@' << index << "\n" #A = index
@@ -274,7 +270,6 @@ def push_this(index)
 end
 
 def pop_this(index)
-  #TODO: check about reg13
   output = "@3\n" #THIS = 3
   output << "D=M\n" #D = RAM[3]
   output << '@' << index << "\n" #A = index
@@ -299,7 +294,6 @@ def push_that(index)
 end
 
 def pop_that(index)
-  #TODO: check about reg13
   output = "@4\n" #THAT = 4
   output << "D=M\n" #D = RAM[4]
   output << '@' << index << "\n" #A = index
@@ -316,7 +310,7 @@ end
 def push_temp(index)
   output = "@5\n" #const for temp
   output << "D=A\n" #D = 5
-  output << '@' << index #A = index
+  output << '@' << index << "\n" #A = index
   output << "A=A+D\n" #A = index + 5
   output << "D=M\n" #D = RAM[index + 5]
   output << push_from_D
@@ -324,10 +318,9 @@ def push_temp(index)
 end
 
 def pop_temp(index)
-  #TODO: check about reg13
   output = "@5\n" #const for temp
   output << "D=A\n" #D = 5
-  output << '@' << index #A = index
+  output << '@' << index << "\n" #A = index
   output << "D=A+D\n" #D = index + 5
   output << "@13\n"
   output << "M=D\n" #reg13 = index + 5
@@ -377,11 +370,11 @@ def pop_static(index, path)
 end
 
 def push_from_D
-  output = "@99\n"
+  output = "@SP\n"
   output << "A=M\n"
   output << "M=D\n"
   output << "D=A+1\n"
-  output << "@99\n"
+  output << "@SP\n"
   output << "M=D\n"
 end
 
@@ -390,7 +383,6 @@ def translate_folder(folder_path)
   all_files = Dir.entries(folder_path)
   for file in all_files
     if file.end_with? '.vm'
-      puts(file)
       output << translate_file(folder_path + '\\' + file)
     end
   end
